@@ -22,11 +22,10 @@ int main(int argc, char const *argv[])
         cin >> num;
         arr.push_back(num);
         int index = (i+1)/2;
-        int temp = arr[i];
         for(int j=i-1; j>=0; j--){
-            if(arr[j] > temp && j>=0){
-                arr[i] = arr[j];
-                arr[j] = temp;
+            if(arr[j] > num && j>=0){
+                arr[j+1] = arr[j];
+                arr[j] = num;
             }
         }
         if ((i+1) % 2 == 1){
